@@ -21,16 +21,34 @@ public class PlayerController : MonoBehaviour
       {
             posOffset += new Vector3 (0f, 0f, Time.deltaTime * speed);
       }
+      if (Input.GetKey("up"))
+      {
+            posOffset += new Vector3(0f, 0f, Time.deltaTime * speed);
+      }
+
       if (Input.GetKey(KeyCode.S))
       {
             posOffset -= new Vector3(0f, 0f, Time.deltaTime * speed);
-        }
+      }
+      if (Input.GetKey("down"))
+      {
+            posOffset -= new Vector3(0f, 0f, Time.deltaTime * speed);
+      }
 
       if (Input.GetKey(KeyCode.A))
       {
             rotOffset = new Vector3(0f, -Time.deltaTime * angle, 0f);
       }
-      if (Input.GetKey(KeyCode.D))
+      if (Input.GetKey("left"))
+      {
+            rotOffset = new Vector3(0f, -Time.deltaTime * angle, 0f);
+      }
+
+        if (Input.GetKey(KeyCode.D))
+      {
+            rotOffset = new Vector3(0f, Time.deltaTime * angle, 0f);
+      }
+      if (Input.GetKey("right"))
       {
             rotOffset = new Vector3(0f, Time.deltaTime * angle, 0f);
       }
